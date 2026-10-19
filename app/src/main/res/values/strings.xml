@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">AssignmentLab2</string>
+    <string name="saved">Saved</string>
+    <string name="back">Back</string>
+    <string name="no_saved_videos">No saved videos yet.\nTap the bookmark on a video to save it.</string>
+    <string name="like">Like</string>
+    <string name="save">Save</string>
+    <string name="creator_profile">Creator profile</string>
+    <string name="paused">Paused</string>
+    <string name="video_id">ID: %1$s</string>
 </resources>

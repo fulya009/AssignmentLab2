@@ -16,18 +16,91 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center" />
 
+    <!-- Invisible layer that catches taps to pause/play -->
+    <View
+        android:id="@+id/tapOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent" />
+
+    <!-- Shown in the center when paused -->
+    <ImageView
+        android:id="@+id/pauseIcon"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center"
+        android:alpha="0.85"
+        android:clickable="false"
+        android:src="@drawable/ic_play"
+        android:visibility="gone"
+        android:contentDescription="@string/paused" />
+
+    <!-- Right-side action buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="120dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <ImageButton
+            android:id="@+id/likeButton"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_heart"
+            android:contentDescription="@string/like" />
+
+        <ImageButton
+            android:id="@+id/profileButton"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_person"
+            android:contentDescription="@string/creator_profile" />
+
+        <ImageButton
+            android:id="@+id/saveButton"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_bookmark"
+            android:contentDescription="@string/save" />
+    </LinearLayout>
+
+    <!-- Bottom-left info -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:orientation="vertical"
         android:padding="16dp"
+        android:layout_marginEnd="72dp"
         android:background="#55000000">
+
+        <TextView
+            android:id="@+id/creatorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/titleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
